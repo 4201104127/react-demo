@@ -5,20 +5,24 @@ class State extends Component {
         super(props)
         this.state = {index: 1}
     }
+    countDown() {
+        this.setState({
+            index: this.state.index - 1
+        })
+    }
+    countUp() {
+        this.setState((prev, props) => {
+            return {
+                index: this.state.index + 1
+            }
+        })
+    }
     render() {
         return (
             <div>
                 <p>Giá trị {this.state.index}</p>
-                <button onClick={() => {
-                    this.setState({
-                        index: this.state.index + 1
-                    })
-                }}>Tăng</button>
-                <button onClick={() => {
-                    this.setState({
-                        index: this.state.index - 1
-                    })
-                }}>Giảm</button>
+                <button onClick={() => this.countUp()}>Tăng</button>
+                <button onClick={() => this.countDown()}>Giảm</button>
             </div>
         )
     }

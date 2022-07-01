@@ -2,6 +2,7 @@ import { Component } from "react";
 import Props from "./components/props";
 import PropsNumber from "./components/props-number";
 import State from "./components/state";
+import ForceUpdate from "./components/forceupdate";
 
 class Welcome extends Component {
     render() {
@@ -11,6 +12,7 @@ class Welcome extends Component {
                 <Props name="Váy" type="váy công chúa" color="Trắng" size="M" number="1">Props 2</Props>
                 <State></State>
                 <PropsNumber></PropsNumber>
+                <ForceUpdate></ForceUpdate>
             </div>
         )
     }
