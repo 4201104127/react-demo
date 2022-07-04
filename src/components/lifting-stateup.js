@@ -4,14 +4,14 @@ export function ComponentCha() {
     }
 
     return (
-        <ComponentCon onReceiveData={receiveData()} />
+        <ComponentCon onReceiveData={receiveData} />
     )
 }
 
 function ComponentCon(props) {
     return (
         <button onClick={() => {
-            props.onReceiveData('data from child')
+            props.onReceiveData(() => 'data from child')
         }}>Send to father</button>
     )
 }

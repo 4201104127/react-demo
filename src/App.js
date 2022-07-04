@@ -7,6 +7,15 @@ import Form from "./components/form";
 import Condition from "./components/condition";
 import Key from "./components/key";
 import { ComponentCha } from "./components/lifting-stateup";
+import Calculator from './components/USDtoVND/calculator';
+import Ref from './components/ref';
+import { ForwardRef } from './components/forward-ref';
+import Context from './components/context';
+import ContextExample from './components/context-example';
+import RenderProps from './components/render-props';
+import HoverComponent from './components/hoc';
+import UseState from './components/Hooks/use-state';
+import UseEffect from './components/Hooks/use-effect';
 
 function App() {
     return (
@@ -20,6 +29,15 @@ function App() {
             <Condition></Condition>
             <Key></Key>
             <ComponentCha></ComponentCha>
+            <Calculator></Calculator>
+            <Ref></Ref>
+            <ForwardRef></ForwardRef>
+            <Context></Context>
+            <ContextExample></ContextExample>
+            <RenderProps></RenderProps>
+            <HoverComponent></HoverComponent>
+            <UseState></UseState>
+            <UseEffect></UseEffect>
         </div>
     );
 }
