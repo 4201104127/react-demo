@@ -22,6 +22,7 @@ export default function Home() {
             <Link to="/use-state">use-state</Link><br></br>
             <Link to="/use-effect">use-effect</Link><br></br>
             <Link to="/use-context">use-context</Link><br></br>
+            <Link to="/redux">redux</Link><br></br>
         </div>
     )
 }

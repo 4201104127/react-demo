@@ -1,13 +1,23 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import {actAddNote} from './../actions'
+import { actAddNote } from './../actions'
+import AddNote from './NoteRedux/addnote'
+import ShowNote from './NoteRedux/shownote'
 
-export class redux extends Component {
-  render() {
-    return (
-      <div>redux</div>
-    )
-  }
+class Redux extends Component {
+    componentDidUpdate() {
+        console.log(this.props)
+    }
+    render() {
+        return (
+            <div>
+                <AddNote></AddNote>
+                    {this.props.note.map((note, index) => {
+                        return <ShowNote noteData={note} key={note.id}></ShowNote>
+                    })}
+            </div>
+        )
+    }
 }
 
 const mapStateToProps = (state) => {
@@ -24,4 +34,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(redux)
+export default connect(mapStateToProps, mapDispatchToProps)(Redux)
